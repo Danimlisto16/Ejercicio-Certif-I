@@ -1,0 +1,12 @@
+C:\Users\Diego\source\repos\Ejercicio-Certif-I\SlnEjercicio\BEUEjercicio\bin\Debug\BEUEjercicio.dll.config
+C:\Users\Diego\source\repos\Ejercicio-Certif-I\SlnEjercicio\BEUEjercicio\bin\Debug\BEUEjercicio.dll
+C:\Users\Diego\source\repos\Ejercicio-Certif-I\SlnEjercicio\BEUEjercicio\bin\Debug\BEUEjercicio.pdb
+C:\Users\Diego\source\repos\Ejercicio-Certif-I\SlnEjercicio\BEUEjercicio\bin\Debug\EntityFramework.dll
+C:\Users\Diego\source\repos\Ejercicio-Certif-I\SlnEjercicio\BEUEjercicio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Diego\source\repos\Ejercicio-Certif-I\SlnEjercicio\BEUEjercicio\bin\Debug\EntityFramework.xml
+C:\Users\Diego\source\repos\Ejercicio-Certif-I\SlnEjercicio\BEUEjercicio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Diego\source\repos\Ejercicio-Certif-I\SlnEjercicio\BEUEjercicio\obj\Debug\BEUEjercicio.csprojAssemblyReference.cache
+C:\Users\Diego\source\repos\Ejercicio-Certif-I\SlnEjercicio\BEUEjercicio\obj\Debug\BEUEjercicio.csproj.CoreCompileInputs.cache
+C:\Users\Diego\source\repos\Ejercicio-Certif-I\SlnEjercicio\BEUEjercicio\obj\Debug\BEUEjercicio.csproj.CopyComplete
+C:\Users\Diego\source\repos\Ejercicio-Certif-I\SlnEjercicio\BEUEjercicio\obj\Debug\BEUEjercicio.dll
+C:\Users\Diego\source\repos\Ejercicio-Certif-I\SlnEjercicio\BEUEjercicio\obj\Debug\BEUEjercicio.pdb
