@@ -20,7 +20,7 @@ namespace UIEjercicio
         }
 
         private void cargarListado() {
-            lstAlumnos.Rows.Clear();
+            this.lstAlumnos.DataSource = null;
             List<Alumno> alumnos = AlumnoBLL.List();
             lstAlumnos.DataSource = alumnos;
         }

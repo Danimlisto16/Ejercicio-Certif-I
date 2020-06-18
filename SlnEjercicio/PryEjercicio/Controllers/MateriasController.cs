@@ -11,106 +11,107 @@ using BEUEjercicio.Transactions;
 
 namespace PryEjercicio.Controllers
 {
-    public class AlumnosController : Controller
-    {        
-        // GET: Alumnos
+    public class MateriasController : Controller
+    {    
+        // GET: Materias
         public ActionResult Index()
         {            
-            ViewBag.Title = "Listado de alumnos registrados";
-
-            //Ejemplo con el método View sobrecargado    
-            return View("List", AlumnoBLL.List()); //1er param Nombre de la vista, 2do el modelo
+            return View(MateriaBLL.List());
         }
 
-        // GET: Alumnos/Details/5
+        // GET: Materias/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest); //Petición equivocada
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Alumno alumno = AlumnoBLL.Get(id);                
-            if (alumno == null)
+            Materia materia = MateriaBLL.Get(id);
+            if (materia == null)
             {
-                return HttpNotFound(); //Alumno no encontrado
+                return HttpNotFound();
             }
-            return View(alumno); //Vista + modelo
+            return View(materia);
         }
 
-        // GET: Alumnos/Create
+        // GET: Materias/Create
         public ActionResult Create()
         {
+            ViewBag.idarea = new SelectList(AreaBLL.List(), "idarea", "nombre");
             return View();
         }
 
-        // POST: Alumnos/Create
+        // POST: Materias/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idalumno,nombres,apellidos,cedula,fecha_nacimiento,lugar_nacimiento,sexo")] Alumno alumno)
+        public ActionResult Create([Bind(Include = "idmateria,nombre,nrc,creditos,idarea")] Materia materia)
         {
             if (ModelState.IsValid)
-            {                
-                AlumnoBLL.Create(alumno);
+            {
+                MateriaBLL.Create(materia);
                 return RedirectToAction("Index");
             }
 
-            return View(alumno);
+            ViewBag.idarea = new SelectList(AreaBLL.List(), "idarea", "nombre", materia.idarea);
+            return View(materia);
         }
 
-        // GET: Alumnos/Edit/5
+        // GET: Materias/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Alumno alumno = AlumnoBLL.Get(id);
-            if (alumno == null)
+            Materia materia = MateriaBLL.Get(id);
+            if (materia == null)
             {
                 return HttpNotFound();
             }
-            return View(alumno);
+            ViewBag.idarea = new SelectList(AreaBLL.List(), "idarea", "nombre", materia.idarea);
+            return View(materia);
         }
 
-        // POST: Alumnos/Edit/5
+        // POST: Materias/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idalumno,nombres,apellidos,cedula,fecha_nacimiento,lugar_nacimiento,sexo")] Alumno alumno)
+        public ActionResult Edit([Bind(Include = "idmateria,nombre,nrc,creditos,idarea")] Materia materia)
         {
             if (ModelState.IsValid)
-            {                
-                AlumnoBLL.Update(alumno);
+            {
+                MateriaBLL.Update(materia);
                 return RedirectToAction("Index");
             }
-            return View(alumno);
+            ViewBag.idarea = new SelectList(AreaBLL.List(), "idarea", "nombre", materia.idarea);
+            return View(materia);
         }
 
-        // GET: Alumnos/Delete/5
+        // GET: Materias/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Alumno alumno = AlumnoBLL.Get(id);
-            if (alumno == null)
+            Materia materia = MateriaBLL.Get(id);
+            if (materia == null)
             {
                 return HttpNotFound();
             }
-            return View(alumno);
+            return View(materia);
         }
 
-        // POST: Alumnos/Delete/5
+        // POST: Materias/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
-        {            
-            AlumnoBLL.Delete(id);
+        {
+            MateriaBLL.Delete(id);            
             return RedirectToAction("Index");
-        }       
+        }                
     }
 }

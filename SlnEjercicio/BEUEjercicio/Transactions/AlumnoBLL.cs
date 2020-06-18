@@ -103,6 +103,18 @@ namespace BEUEjercicio.Transactions
             //y la evluacion de condiciones lambda
         }
 
+        public static List<Alumno> ListToNames()
+        {
+            Entities db = new Entities();
+            List<Alumno> result = new List<Alumno>();
+            db.Alumnoes.ToList().ForEach(x => 
+                result.Add(
+                    new Alumno {
+                        nombres = x.nombres + " " + x.apellidos,
+                        idalumno = x.idalumno
+                    }));
+            return result;            
+        }
 
         private static List<Alumno> GetAlumnos(string criterio)
         {
