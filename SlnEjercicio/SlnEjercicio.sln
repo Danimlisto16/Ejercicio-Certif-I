@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BEUEjercicio", "BEUEjercici
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIEjercicio", "UIEjercicio\UIEjercicio.csproj", "{A7082DE6-8547-4B64-B6D8-877B89251FD4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiEscolastico", "WebApiEscolastico\WebApiEscolastico.csproj", "{1F35DD92-04B3-48EF-AF84-F86B4AD12B97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A7082DE6-8547-4B64-B6D8-877B89251FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7082DE6-8547-4B64-B6D8-877B89251FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7082DE6-8547-4B64-B6D8-877B89251FD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F35DD92-04B3-48EF-AF84-F86B4AD12B97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F35DD92-04B3-48EF-AF84-F86B4AD12B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F35DD92-04B3-48EF-AF84-F86B4AD12B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F35DD92-04B3-48EF-AF84-F86B4AD12B97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

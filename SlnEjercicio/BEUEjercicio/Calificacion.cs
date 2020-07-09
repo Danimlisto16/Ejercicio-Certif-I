@@ -9,6 +9,7 @@
 
 namespace BEUEjercicio
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -19,7 +20,8 @@ namespace BEUEjercicio
         public Nullable<System.DateTime> fecha { get; set; }
         public string unidad { get; set; }
         public Nullable<int> idmatricula { get; set; }
-    
+
+        [JsonIgnore]
         public virtual Matricula Matricula { get; set; }
     }
 }

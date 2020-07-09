@@ -127,6 +127,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AlumnosController.cs" />
+    <Compile Include="Controllers\AreasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MateriasController.cs" />
     <Compile Include="Controllers\MatriculasController.cs" />
@@ -187,6 +188,11 @@
     <Content Include="Views\Matriculas\Details.cshtml" />
     <Content Include="Views\Matriculas\Edit.cshtml" />
     <Content Include="Views\Matriculas\Index.cshtml" />
+    <Content Include="Views\Areas\Create.cshtml" />
+    <Content Include="Views\Areas\Delete.cshtml" />
+    <Content Include="Views\Areas\Details.cshtml" />
+    <Content Include="Views\Areas\Edit.cshtml" />
+    <Content Include="Views\Areas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
