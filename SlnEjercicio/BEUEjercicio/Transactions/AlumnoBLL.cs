@@ -34,7 +34,7 @@ namespace BEUEjercicio.Transactions
 
         public static Alumno Get(int? id)
         {
-            Entities db = new Entities();
+            Entities db = new Entities();   // esta linea deberia utilizar la palabra reservada using para realizar el dispose automatico, de igual manera el try catch x cualquier error
             return db.Alumnoes.Find(id);
         }
 
