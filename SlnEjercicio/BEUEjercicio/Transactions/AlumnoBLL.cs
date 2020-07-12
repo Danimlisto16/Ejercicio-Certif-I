@@ -34,8 +34,18 @@ namespace BEUEjercicio.Transactions
 
         public static Alumno Get(int? id)
         {
-            Entities db = new Entities();
-            return db.Alumnoes.Find(id);
+            using (Entities db = new Entities()) 
+            {
+                try
+                {
+                    return db.Alumnoes.Find(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                
+            }
         }
 
         public static void Update(Alumno alumno) {
